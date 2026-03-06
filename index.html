@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.U.T.H.U.R | Centralized Homelab Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        muthur: {
+                            base: '#0f172a',
+                            panel: '#1e293b',
+                            accent: '#38bdf8',
+                            text: '#f8fafc',
+                            muted: '#94a3b8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Base Dark Theme Styling */
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Subtle grid background for tech aesthetic */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        }
+    </style>
+</head>
+
+<body class="bg-muthur-base bg-grid text-muthur-text antialiased flex flex-col items-center justify-center">
+
+    <!-- Hero Section -->
+    <main class="max-w-4xl w-full px-6 py-20 text-center">
+        <!-- Logo -->
+        <div
+            class="mx-auto w-20 h-20 mb-8 rounded-xl bg-muthur-accent flex items-center justify-center font-bold text-4xl text-slate-900 shadow-[0_0_30px_rgba(56,189,248,0.3)]">
+            M
+        </div>
+
+        <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-white mb-6">
+            M.U.T.H.U.R
+        </h1>
+
+        <p class="text-xl md:text-2xl text-muthur-muted max-w-2xl mx-auto mb-12 leading-relaxed">
+            The fully localized, air-gapped, semantics-driven intelligence platform for the modern homelab.
+        </p>
+
+        <!-- Call to Action Buttons -->
+        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+
+            <!-- Link to Nostromo -->
+            <a href="/pages/Nostromo/index.html"
+                class="group relative px-8 py-4 bg-muthur-accent text-slate-900 font-bold text-lg rounded-lg hover:bg-sky-300 transition-all duration-300 shadow-[0_0_20px_rgba(56,189,248,0.2)] hover:shadow-[0_0_30px_rgba(56,189,248,0.4)] flex items-center gap-3">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                </svg>
+                Explore Nostromo Catalog
+            </a>
+
+            <!-- Link to Github -->
+            <a href="https://github.com/m-u-t-h-u-r/muthur" target="_blank"
+                class="px-8 py-4 bg-muthur-panel text-white font-semibold text-lg rounded-lg border border-slate-700 hover:border-slate-500 hover:bg-slate-800 transition-all duration-300 flex items-center gap-3">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd"
+                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                        clip-rule="evenodd"></path>
+                </svg>
+                View on GitHub
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto py-8 text-center text-sm text-slate-500 font-mono">
+        &copy; 2026 M.U.T.H.U.R Project | Operating offline, intelligently.
+    </footer>
+
+</body>
+
+</html>

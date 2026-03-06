@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostromo | M.U.T.H.U.R Web Catalog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        muthur: {
+                            base: '#0f172a',
+                            panel: '#1e293b',
+                            accent: '#38bdf8',
+                            text: '#f8fafc',
+                            muted: '#94a3b8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Base Dark Theme Styling */
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Subtle grid background for tech aesthetic */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        }
+    </style>
+</head>
+
+<body class="bg-muthur-base bg-grid text-muthur-text antialiased">
+
+    <!-- Navigation Header -->
+    <header class="bg-muthur-panel border-b border-slate-700/50 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo Area -->
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div
+                        class="w-8 h-8 rounded bg-muthur-accent flex items-center justify-center font-bold text-slate-900">
+                        M</div>
+                    <span class="font-semibold text-xl tracking-tight text-white">Nostromo <span
+                            class="text-muthur-muted text-sm font-normal">Catalog</span></span>
+                </div>
+
+                <!-- Search Bar Placeholder -->
+                <div class="flex-1 max-w-lg mx-8 hidden md:block">
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg class="h-5 w-5 text-muthur-muted" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </div>
+                        <input type="text"
+                            class="block w-full pl-10 pr-3 py-2 border border-slate-600 rounded-md leading-5 bg-slate-800 text-slate-300 placeholder-slate-400 focus:outline-none focus:bg-slate-700 focus:border-muthur-accent focus:ring-1 focus:ring-muthur-accent sm:text-sm transition-colors"
+                            placeholder="Search the library...">
+                    </div>
+                </div>
+
+                <!-- Right Nav -->
+                <div class="flex items-center gap-4">
+                    <a href="https://github.com/m-u-t-h-u-r/Nostromo" target="_blank"
+                        class="text-muthur-muted hover:text-white transition-colors">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd"
+                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="flex-1 flex overflow-hidden">
+
+        <!-- Sidebar Navigation (Taxonomy Placeholder) -->
+        <nav
+            class="w-64 bg-muthur-panel/50 border-r border-slate-700/50 hidden md:block overflow-y-auto hidden-scrollbar flex-shrink-0">
+            <div class="px-4 py-6">
+                <h3 class="px-3 text-xs font-semibold text-muthur-accent uppercase tracking-wider mb-2">Domains</h3>
+                <div class="space-y-1">
+                    <a href="#"
+                        class="bg-slate-800 text-white group flex items-center px-3 py-2 text-sm font-medium rounded-md">
+                        <svg class="text-muthur-accent mr-3 flex-shrink-0 h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
+                            </path>
+                        </svg>
+                        All Applications
+                    </a>
+                    <a href="#"
+                        class="text-muthur-muted hover:bg-slate-800 hover:text-white group flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors">
+                        Automation
+                    </a>
+                    <a href="#"
+                        class="text-muthur-muted hover:bg-slate-800 hover:text-white group flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors">
+                        Communication
+                    </a>
+                    <a href="#"
+                        class="text-muthur-muted hover:bg-slate-800 hover:text-white group flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors">
+                        Infrastructure
+                    </a>
+                    <!-- This will be dynamically generated by the JSON-LD -->
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 overflow-y-auto focus:outline-none p-6 md:p-8">
+
+            <div class="mb-8">
+                <h1 class="text-3xl font-bold text-white tracking-tight">Application Library</h1>
+                <p class="mt-2 text-muthur-muted">Browse the strictly governed, JSON-LD native catalog of 2,600+ homelab
+                    applications.</p>
+            </div>
+
+            <!-- App Grid Placeholder -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="appGrid">
+
+                <!-- Sample Card 1 -->
+                <div
+                    class="bg-muthur-panel border border-slate-700/50 rounded-xl overflow-hidden hover:border-muthur-accent/50 hover:shadow-[0_0_15px_rgba(56,189,248,0.15)] transition-all duration-300 group cursor-pointer relative top-0 hover:-top-1">
+                    <div class="p-5">
+                        <div class="flex items-start justify-between">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-slate-800 rounded-lg border border-slate-700 p-2 flex items-center justify-center">
+                                <!-- Icon placeholder -->
+                                <svg class="w-6 h-6 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                                </svg>
+                            </div>
+                            <span
+                                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                                Open Source
+                            </span>
+                        </div>
+                        <div class="mt-4">
+                            <h3
+                                class="text-lg font-semibold text-white group-hover:text-muthur-accent transition-colors">
+                                Docker</h3>
+                            <p class="mt-1 text-sm text-muthur-muted line-clamp-2">Platform used to develop, ship, and
+                                run applications inside isolated environments called containers.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-slate-800/50 px-5 py-3 border-t border-slate-700/50 flex justify-between items-center">
+                        <span class="text-xs text-slate-400 font-mono">virtualization</span>
+                        <button class="text-xs text-muthur-accent hover:text-white font-medium transition-colors">View
+                            Details &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Sample Card 2 -->
+                <div
+                    class="bg-muthur-panel border border-slate-700/50 rounded-xl overflow-hidden hover:border-muthur-accent/50 hover:shadow-[0_0_15px_rgba(56,189,248,0.15)] transition-all duration-300 group cursor-pointer relative top-0 hover:-top-1">
+                    <div class="p-5">
+                        <div class="flex items-start justify-between">
+                            <div
+                                class="flex-shrink-0 w-12 h-12 bg-slate-800 rounded-lg border border-slate-700 p-2 flex items-center justify-center">
+                                <span class="text-orange-400 font-bold text-xl">P</span>
+                            </div>
+                            <span
+                                class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                                Open Source
+                            </span>
+                        </div>
+                        <div class="mt-4">
+                            <h3
+                                class="text-lg font-semibold text-white group-hover:text-muthur-accent transition-colors">
+                                Portainer</h3>
+                            <p class="mt-1 text-sm text-muthur-muted line-clamp-2">A centralized service delivery
+                                platform for containerized applications that can be used to manage Docker environments.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-slate-800/50 px-5 py-3 border-t border-slate-700/50 flex justify-between items-center">
+                        <span class="text-xs text-slate-400 font-mono">docker_management</span>
+                        <button class="text-xs text-muthur-accent hover:text-white font-medium transition-colors">View
+                            Details &rarr;</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- System Status Footer Log -->
+            <div
+                class="mt-12 pt-6 border-t border-slate-700/50 text-xs text-slate-500 font-mono flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                SYSTEM READY. WAITING FOR JSON-LD HYDRATION...
+            </div>
+
+        </main>
+    </div>
+
+</body>
+
+</html>
